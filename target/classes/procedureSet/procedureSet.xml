@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ID是存储过程唯一标识，name是存储过程的实际名字，param节点里面是参数的名字，这里param参数设置的顺序一定要和存储过程实际的顺序一致 -->
+<root>
+	<procedure ID="read_all" name="read_all" isResultSet="true">
+		<param type="in">a</param>
+		<param type="in">b</param>
+		<param type="out">c</param>
+		<param type="out">d</param>
+	</procedure>
+	<procedure ID="olnyOut_procedure" name="olnyOut_procedure" isResultSet="false">
+		<param type="out">a</param>
+		<param type="out">b</param>
+	</procedure>
+	<procedure ID="prc_query" name="prc_query" isResultSet="true">
+		<!-- <param type="in">startdate</param>
+		<param type="in">enddate</param> -->
+		<param type="in" dataType="int">c</param>
+		<param type="in" dataType="date">d</param>
+		<param type="out" dataType="int">a</param>
+		<param type="out" dataType="date">b</param>
+		<param type="out" dataType="string">e</param>>
+	</procedure>
+	<procedure ID="pre_test" name="pre_test" isResultSet="true">
+	    <param type="in" dataType="date">c</param>
+	    <param type="out" dataType="date">d</param>
+		<param type="out" dataType="int">a</param>
+		<param type="out" dataType="string">b</param>
+		<param type="out" dataType="float">e</param>
+	</procedure>
+	
+	
+	
+	<procedure ID="testPro" name="testPro" isResultSet="true">
+		<param type="in" dataType="string">userName</param>
+	</procedure>
+	
+</root>
