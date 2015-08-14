@@ -91,7 +91,9 @@ public class IServiceImpl implements IService{
 		if(procedureOutParamsList!=null && procedureOutParamsList.size()>0){
 			outParmasMap = new HashMap<String, String>();
 			for(String outParam:procedureOutParamsList){
-				outParmasMap.put(outParam, resultMap.get(outParam).toString());
+				if(resultMap.get(outParam)!=null){
+					outParmasMap.put(outParam,resultMap.get(outParam).toString());
+				}
 			}
 		}
 		if(resultSetList!=null){
@@ -139,7 +141,7 @@ public class IServiceImpl implements IService{
 
 		// 根据操作代码得到用户
 //		String xml = dfw.procedureCallService("prc_query", "<paramsData><d>2012-09-09</d><c>12</c></paramsData>");
-		String xml = dfw.procedureCallService("testPro", "<paramsData><userName>%</userName></paramsData>");
+		String xml = dfw.procedureCallService("testPro", "<paramsData><userName>%</userName><ifValue>-1</ifValue></paramsData>");
 //		String xml = dfw.procedureCallService("olnyOut_procedure", "<paramsData></paramsData>");
 		System.out.println(xml);
 	}

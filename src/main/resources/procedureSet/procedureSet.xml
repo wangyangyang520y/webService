@@ -32,6 +32,18 @@
 	
 	<procedure ID="testPro" name="testPro" isResultSet="true">
 		<param type="in" dataType="string">userName</param>
+		<param type="in" dataType="int">ifValue</param>
+		<param type="out" dataType="string">resultTest</param>
+	</procedure>
+	
+	
+	<procedure ID="get_reservation_record" name="get_reservation_record" isResultSet="true">
+		<param type="in" dataType="string">hospital_card</param>
+		<param type="in" dataType="string">medical_insurance_card</param>
+		<param type="in" dataType="string">certificates_number</param>
+
+		<param type="out" dataType="string">Result1</param>
+		<param type="out" dataType="string">ErrorMsg</param>
 	</procedure>
 	
 </root>
